@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE uitool PUBLIC "-//NewLand UITool //DTD Direct Web Remoting 1.0//EN" "../function-config.dtd">
+<!-- main config file ,this config file is required -->
+<function-config>
+    <system sysId="0000">
+        <function id="1080340" beanName="">
+            <execute-sql>
+                <sql id="biz_agent_order">
+                    <![CDATA[
+					SELECT *
+					FROM (
+ SELECT
+_a_o.SN,
+_a_o.ORDER_NUM,
+_a_o.ORDER_TIME,
+_a_o.STATUS,
+_a_o.RECEIVE_ADDRESS_ID,
+_a_o.USER_ID,
+_a_o.TOTAL_PRICE,
+_a_o.IS_INVOICE,
+_a_o.INVOICE_TYPE,
+_a_o.INVOICE_HEAD,
+_a_o.INVOICE_COMPANY_NAME,
+_a_o.INVOICE_TAXPAYER_ID,
+_a_o.INVOICE_ADDRESS,
+_a_o.INVOICE_PHONE,
+_a_o.INVOICE_BANK_NAME,
+_a_o.INVOICE_BANK_ACCOUNT,
+_a_o.PAY_TIME,
+_a_o.PREPAY_ID,
+_a_o.QR_FILE_SN,
+_a_o.ADDER_SN,
+_a_o.ADDER_NAME,
+_a_o.ADD_TIME,
+_a_o.UPDATER_SN,
+_a_o.UPDATER_NAME,
+_a_o.UPDATE_TIME,
+_a_u.USER_NAME USER_NAME,
+_a_o_l.IS_SEND,
+_a_o_t.TRANS_PLATFORM_TYPE
+ FROM biz_agent_order _a_o LEFT JOIN biz_agent_user _a_u ON _a_u.SN = _a_o.USER_ID
+ LEFT JOIN biz_agent_order_logtc _a_o_l ON  _a_o_l.ORDER_ID = _a_o.SN
+ LEFT JOIN biz_agent_order_trans _a_o_t ON  _a_o_t.ORDER_ID = _a_o.ORDER_NUM
+
+ ORDER BY _a_o.ORDER_TIME DESC
+
+					) a WHERE 1=1
+					]]>
+                </sql>
+            </execute-sql>
+            <func-sql id="1" sqlId="biz_agent_order" loop="false" sqlType="select" argGroup="0" executer="">
+                <params id="" errMsg="查询列表信息出错">
+                </params>
+            </func-sql>
+        </function>
+    </system>
+</function-config>

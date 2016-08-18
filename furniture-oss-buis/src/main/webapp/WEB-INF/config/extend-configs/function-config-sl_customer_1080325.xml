@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE uitool PUBLIC "-//NewLand UITool //DTD Direct Web Remoting 1.0//EN" "../function-config.dtd">
+<!-- main config file ,this config file is required -->
+<function-config>
+    <system sysId="0000">
+        <function id="1080325" beanName="">
+            <execute-sql>
+                <sql id="sl_customer"  pageType="9">
+                    <![CDATA[
+					select *
+					from (
+						select
+ADDER_NAME,
+ADDER_SN,
+ADDRESS,
+ADD_TIME,
+CITY,
+COUNTY,
+GRADE,
+ID,
+IS_DELETE,
+NAME,
+PROVINCE,
+REMARK,
+(select oss_admin_user.fullname from oss_admin_user where sl_customer.SELLER_SN = oss_admin_user.user_id ) as SELLER_SN,
+SN,
+(select oss_admin_parameter.parameter_name from oss_admin_parameter where sl_customer.STATUS = oss_admin_parameter.parameter_key and oss_admin_parameter.parameter_type = 'SL_CUSTOMER_STATUS' ) as STATUS,
+TELEPHONE,
+UPDATER_NAME,
+UPDATER_SN,
+UPDATE_TIME,
+URL
+ from sl_customer
+ where sl_customer.IS_DELETE = '0'
+					) a where 1=1
+					]]>
+                </sql>
+            </execute-sql>
+            <func-sql id="1" sqlId="sl_customer" loop="false" sqlType="select" argGroup="0" executer="">
+                <params id="" errMsg="查询列表信息出错">
+                </params>
+            </func-sql>
+        </function>
+    </system>
+</function-config>

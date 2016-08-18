@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+	<session-factory>
+		<property name="hibernate.cglib.use_reflection_optimizer">true</property>
+		<property name="hibernate.dialect">org.hibernate.dialect.ExtendedMySQLDialect</property>
+		<!--<property name="hibernate.default_schema">cief_n</property>-->
+		<property name="show_sql">false</property>
+		<property name="format_sql">false</property>
+		<!-- start -->
+		<mapping resource="com/focustech/oss2008/model/OssAdminUser.hbm.xml" />
+		<mapping resource="com/focustech/oss2008/model/OssAdminRole.hbm.xml" />
+		<mapping resource="com/focustech/oss2008/model/OssAdminResource.hbm.xml" />
+		<mapping resource="com/focustech/oss2008/model/OssAdminDepartment.hbm.xml" />
+		<mapping resource="com/focustech/oss2008/model/OssAdminParameter.hbm.xml" />
+		<mapping resource="com/focustech/oss2008/model/OssAdminProxyUser.hbm.xml" />
+		<mapping resource="com/focustech/oss2008/model/RoleResource.hbm.xml" />
+		<mapping resource="com/focustech/oss2008/model/OssAdminLoginControl.hbm.xml" />
+		<mapping resource="com/focustech/oss2008/model/OssAdminLoginLog.hbm.xml" />
+		<mapping resource="com/focustech/oss2008/model/RoleModel.hbm.xml" />
+		<mapping resource="com/focustech/oss2008/model/OssAdminBulletin.hbm.xml" />
+        <mapping resource="com/focustech/oss2008/model/OssAdminUserOainfo.hbm.xml" />
+    	<mapping resource="com/focustech/oss2008/model/OssKeywordChk.hbm.xml" />
+    	<mapping resource="com/focustech/oss2008/model/OssAdminPortlet.hbm.xml" />
+		<mapping class="com.focustech.oss2008.model.UitoolFuncDisplayInfo"/>
+		<mapping class="com.focustech.oss2008.model.UitoolListDisplayField"/>
+		<mapping class="com.focustech.oss2008.model.UitoolFuncTable"/>
+    	<!-- end -->
+		<mapping class="com.focustech.focus3d.model.banner.BannerInfo"/>
+		<mapping class="com.focustech.focus3d.model.prodcase.ProdCase"/>
+		<mapping class="com.focustech.focus3d.model.prodcase.ProdCaseFile"/>
+		<mapping class="com.focustech.focus3d.model.prodcase.ProdCaseFileContent"/>
+		<!--商城模型-->
+		<mapping class="com.focustech.focus3d.model.model.ModelInfo"/>
+		<mapping class="com.focustech.focus3d.model.model.ModelContentInfo"/>
+		<!--搜索表-->
+		<mapping class="com.focustech.focus3d.model.searchtable.SearchTable"/>
+		<mapping class="com.focustech.focus3d.model.companyinfo.CompanyInfo"/>
+		<mapping class="com.focustech.focus3d.model.userinfo.UserInfo"/>
+		<mapping class="com.focustech.focus3d.model.userinfo.LoginInfo"/>
+		<mapping class="com.focustech.focus3d.model.appicon.AppIconLib"/>
+		<!--app-->
+		<mapping class="com.focustech.focus3d.model.app.AppFrame"/>
+		<mapping class="com.focustech.focus3d.model.app.AppFrameBoot"/>
+		<mapping class="com.focustech.focus3d.model.app.AppFrameContact"/>
+		<mapping class="com.focustech.focus3d.model.app.AppFrameCreateDetail"/>
+		<mapping class="com.focustech.focus3d.model.app.AppFrameGuid"/>
+		<mapping class="com.focustech.focus3d.model.app.AppFrameGuidDetail"/>
+		<mapping class="com.focustech.focus3d.model.app.AppFrameIcon"/>
+		<mapping class="com.focustech.focus3d.model.app.AppFramePublish"/>
+		<mapping class="com.focustech.focus3d.model.app.AppFrameStyle"/>
+		<mapping class="com.focustech.focus3d.model.app.AppProd"/>
+		<mapping class="com.focustech.focus3d.model.app.AppProdVideoAr"/>
+		<mapping class="com.focustech.focus3d.model.app.AppProdVrAr"/>
+		<mapping class="com.focustech.focus3d.model.message.MessageNotice"/>
+	    <!--销售系统-->
+		<mapping class="com.focustech.focus3d.model.sale.customer.Customer"/>
+		<mapping class="com.focustech.focus3d.model.sale.customer.Tag"/>
+		<mapping class="com.focustech.focus3d.model.sale.customer.CustomerTag"/>
+		<!--app菜单-->
+		<mapping class="com.focustech.focus3d.model.appmenu.AppMenuData"/>
+		<mapping class="com.focustech.focus3d.model.appmenu.AppMenuItem"/>
+		<mapping class="com.focustech.focus3d.model.appmenu.AppIdentifyFile"/>
+		<mapping class="com.focustech.focus3d.model.qrcode.MxjQrCode"/>
+		<mapping class="com.focustech.focus3d.model.qrcode.MxjQrCodeTemp"/>
+		<mapping class="com.focustech.focus3d.model.qrcode.MxjQrCodeFactory"/>
+		<mapping class="com.focustech.focus3d.model.appconfig.MxjAppConfig"/>
+		<mapping class="com.focustech.focus3d.model.mxjad.MxjAd"/>
+		<!--agent-->
+		<mapping class="com.focustech.focus3d.model.agent.product.AgentProduct"/>
+		<mapping class="com.focustech.focus3d.model.agent.product.AgentProductUser"/>
+		<mapping class="com.focustech.focus3d.model.agent.user.AgentLogin"/>
+		<mapping class="com.focustech.focus3d.model.agent.user.AgentUser"/>
+		<!--agent-->
+		<mapping class="com.focustech.focus3d.model.agent.order.AgentOrder"/>
+		<mapping class="com.focustech.focus3d.model.agent.order.AgentOrderItem"/>
+		<mapping class="com.focustech.focus3d.model.agent.order.AgentOrderLogtc"/>
+		<mapping class="com.focustech.focus3d.model.agent.order.AgentReceiveAddress"/>
+		<mapping class="com.focustech.focus3d.model.agent.order.AgentOrderTrans"/>
+		<!--agent 权限管理-->
+		<mapping class="com.focustech.focus3d.model.agent.auth.AgentResource"/>
+		<mapping class="com.focustech.focus3d.model.agent.auth.AgentRole"/>
+		<mapping class="com.focustech.focus3d.model.agent.auth.AgentRoleResource"/>
+		<mapping class="com.focustech.focus3d.model.agent.auth.AgentUserRole"/>
+
+	</session-factory>
+</hibernate-configuration>

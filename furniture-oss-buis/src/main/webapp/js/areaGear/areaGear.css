@@ -1,0 +1,33 @@
+
+/*公共*/
+
+/*联动控件*/
+.areaGear {padding:0;width:510px;margin-left:-255px;margin-top:-150px;position: absolute;left:50%;top:50%;z-index:100;background:none repeat scroll 0 0 #FFFFFF;border:5px solid #CADFF0;}
+.areaGear .close{float: right;cursor:pointer;	margin:1px 5px 0 0;}
+.areaGear h2 {background:none repeat scroll 0 0 #EAF2F8;height:25px;line-height:140%;margin:0;padding:6px 3px 0 5px;}
+.areaGear h2 small {font-size:12px;font-weight:normal;margin-left:5px;}
+.areaGear h2 .fr {cursor:pointer;margin:1px 5px 0 0;}
+.areaGear .popCon {padding:15px;}
+.areaGear h3 {background:none repeat scroll 0 0 #F9F9F9;}
+
+.areaGear .selectBox {overflow:hidden;padding:15px 0;height:120px;overflow:auto;}
+.areaGear .selectBox .item {clear:both;}
+.areaGear .selectBox label {float:left;padding:2px 0;width:116px;}
+.areaGear .toolbar{overflow:hidden;padding:2px 0}
+.areaGear .selected {background:none repeat scroll 0 0 #FEFFD9;border:1px solid #E1E3AD;margin-bottom:10px;padding:5px 10px;}
+.areaGear .selected .clear{cursor:pointer;float:right;}
+.areaGear .selectedBox {overflow:auto;max-height:58px;_height:38px;}
+.areaGear .selectedBox div {float:left; padding-right:10px;white-space: nowrap;}
+
+.areaGear .button {padding:5px 0 10px;position:relative;text-align:center;}
+.areaGear .errorBox {	background-color: #ffe2e2;background-image: url(/mice/images/reg3.gif);background-repeat: no-repeat;background-position: top left;
+	padding: 3px 5px 2px 25px;line-height: 16px;color: #C91B05;	clear: both;}
+
+.optdisabled{font-size: 12px;font-style: normal;font-weight: normal;font-variant: normal;color:#aaaaaa;background-color: #f5f5f5;padding-left:4px;}
+
+/*分页*/
+.ajaxPager{text-align:right;padding:5px 0 0 0;}
+.ajaxPager a,.ajaxPager span{margin:0 4px;width:10px}
+.ajaxPager .sumP strong{color:#ff6600;font-weight:bold}
+.ajaxPager .curP{color:#ff6600;cursor:default;font-weight:bold;}
+.ajaxPager .moreP{padding:0 }

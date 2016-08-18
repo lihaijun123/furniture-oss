@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE uitool PUBLIC "-//NewLand UITool //DTD Direct Web Remoting 1.0//EN" "../function-config.dtd">
+<!-- main config file ,this config file is required -->
+<function-config>
+    <system sysId="0000">
+        <function id="1080332" beanName="">
+            <execute-sql>
+                <sql id="BIZ_MXJ_APP_IDENTIFY_FILE">
+                    <![CDATA[
+					select *
+					from (
+						select
+ADDER_NAME,
+ADDER_SN,
+ADD_TIME,
+DAT_FILE_SN,
+NAME,
+SN,
+TYPE,
+UPDATER_NAME,
+UPDATER_SN,
+UPDATE_TIME,
+VERSION_NUM
+ from BIZ_MXJ_APP_IDENTIFY_FILE
+					) a where 1=1
+					]]>
+                </sql>
+            </execute-sql>
+            <func-sql id="1" sqlId="BIZ_MXJ_APP_IDENTIFY_FILE" loop="false" sqlType="select" argGroup="0" executer="">
+                <params id="" errMsg="查询列表信息出错">
+                </params>
+            </func-sql>
+        </function>
+    </system>
+</function-config>
