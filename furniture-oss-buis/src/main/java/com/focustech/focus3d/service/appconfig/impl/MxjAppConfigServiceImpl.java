@@ -16,7 +16,6 @@ import com.focustech.focus3d.dao.appconfig.MxjAppConfigDao;
 import com.focustech.focus3d.model.appconfig.AppConfigKeyValue;
 import com.focustech.focus3d.model.appconfig.MxjAppConfig;
 import com.focustech.focus3d.service.appconfig.MxjAppConfigService;
-import com.focustech.focus3d.service.mq.AppMenuPublish;
 import com.focustech.oss2008.dao.BaseHibernateDao;
 import com.focustech.oss2008.model.AutoArrayList;
 import com.focustech.oss2008.service.impl.BaseEntityServiceImpl;
@@ -31,8 +30,6 @@ public class MxjAppConfigServiceImpl extends BaseEntityServiceImpl<MxjAppConfig>
 
 	@Autowired
 	private MxjAppConfigDao<MxjAppConfig> appConfigDao;
-	@Autowired
-	private AppMenuPublish appMenuPublish;
 
 	public static final String SERVICE_KEYS = "focus3d.mxj.appconfig.get,focus3d.mxj.appconfig.type.get";
 
@@ -51,7 +48,6 @@ public class MxjAppConfigServiceImpl extends BaseEntityServiceImpl<MxjAppConfig>
 		config.setKeyValue(localJo.toString());
 		config.setKeyValueCloud(cloudJo.toString());
 		super.insertOrUpdate(config);
-		appMenuPublish.publish(SERVICE_KEYS);
 	}
 
 	@Override
@@ -64,13 +60,11 @@ public class MxjAppConfigServiceImpl extends BaseEntityServiceImpl<MxjAppConfig>
 		config.setKeyValue(localJo.toString());
 		config.setKeyValueCloud(cloudJo.toString());
 		super.update(config);
-		appMenuPublish.publish(SERVICE_KEYS);
 	}
 
 	@Override
 	public void delete(Serializable id) {
 		super.delete(id);
-		appMenuPublish.publish(SERVICE_KEYS);
 	}
 
 	@Override

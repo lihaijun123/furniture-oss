@@ -18,7 +18,6 @@ import com.focustech.focus3d.dao.prodcase.ProdCaseFileContentDao;
 import com.focustech.focus3d.model.prodcase.ProdCase;
 import com.focustech.focus3d.model.prodcase.ProdCaseFile;
 import com.focustech.focus3d.model.prodcase.ProdCaseFileContent;
-import com.focustech.focus3d.service.mq.ProdCasePublish;
 import com.focustech.focus3d.service.prodcase.ProdCaseService;
 import com.focustech.oss2008.dao.BaseHibernateDao;
 import com.focustech.oss2008.service.impl.BaseEntityServiceImpl;
@@ -36,8 +35,6 @@ public class ProdCaseServiceImpl extends BaseEntityServiceImpl<ProdCase> impleme
 
 	@Autowired
 	private ProdCaseFileContentDao<ProdCaseFileContent> prodCaseFileContentDao;
-	@Autowired
-	private ProdCasePublish prodCasePublish;
 	@Override
 	public BaseHibernateDao<ProdCase> getEntityDao() {
 		return prodCaseDao;
@@ -88,7 +85,6 @@ public class ProdCaseServiceImpl extends BaseEntityServiceImpl<ProdCase> impleme
 	 * *
 	 */
 	public void publishToJms(){
-		prodCasePublish.publish("1");
 	}
 	/**
 	 * 获取二维码sn

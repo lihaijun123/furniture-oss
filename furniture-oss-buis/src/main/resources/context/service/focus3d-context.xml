@@ -17,9 +17,6 @@
 	<import resource="classpath:/context/service/service_trigger.xml" />
 	<import resource="classpath:/com/focustech/cief/filemanage/conf/filemanage-client.xml" />
 	<import resource="classpath:/com/focustech/focus3d/app/conf/app-factory-client.xml" />
-	<import resource="classpath:/context/mq/activemq_config_banner.xml" />
-	<import resource="classpath:/context/mq/activemq_config_prodcase.xml" />
-	<import resource="classpath:/context/mq/activemq_config_appmenu.xml" />
 	<!--公共组件-->
 	<import resource="classpath:/context/component/component.xml" />
 	<import resource="classpath:/context/component/cfs-client.xml" />
