@@ -3,6 +3,7 @@ activemq.brokerurl=tcp://192.168.65.192:61616
 #文件服务器
 cfs.nameserver.name=oss
 cfs.webserver.url=http://file2.3d-focus.com
+cfs.dataserver=139.196.173.139:8018
 #app服务器设置
 app.server.ip=192.168.65.195
 app.server.port=8016

@@ -54,7 +54,7 @@ function fileParam(){
 //处理选择文件服务器的Action的Url
 function getServerActionOperUrl(doWhat){
 	//return "http://192.168.21.48:8999/crs/i1/" + doWhat + "?1=1";
-	return "http://192.168.21.55/crs/i1/" + doWhat + "?1=1";
+	return "http://139.196.173.139:8018/crs/i1/" + doWhat + "?1=1";
 }
 
 //文件上传成功后默认的回调方法
