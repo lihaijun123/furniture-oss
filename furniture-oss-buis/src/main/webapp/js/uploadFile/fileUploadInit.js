@@ -58,7 +58,7 @@ function getServerActionOperUrl(doWhat){
 }
 
 //文件上传成功后默认的回调方法
-function defaultOnComplete(event, ID, fileObj, response, data){
+function defaultOnComplete(event, ID, fileObj, response, data){debugger;
 	//文件上传空间对象的id
 	var uploadFileId = event.currentTarget.id;
 

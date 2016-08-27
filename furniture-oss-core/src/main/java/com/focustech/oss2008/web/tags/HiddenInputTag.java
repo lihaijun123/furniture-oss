@@ -40,7 +40,10 @@ public class HiddenInputTag {
 		if(StringUtils.isNotEmpty(hname)){
 			sb.append(" name=\"" + hname + "\" ");
 		}
-		sb.append(" value=\"" + TCUtil.sv(this.hvalue) + "\"/>");
+		if(StringUtils.isNotEmpty(hvalue)){
+			sb.append(" value=\"" + TCUtil.sv(this.hvalue) + "\"");
+		}
+		sb.append("/>");
 		return sb.toString();
 	}
 

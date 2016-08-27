@@ -41,11 +41,20 @@
 	<aop:config>
 		<aop:pointcut id="defaultServiceOperation"
 			expression="execution(* com.focustech.oss2008.service.impl.*ServiceImpl.*(..))" />
+		
 		<aop:pointcut id="defaultServiceOperationVe"
 			expression="execution(* com.focustech.focus3d.service..impl.*ServiceImpl.*(..))" />
+		
+		<aop:pointcut id="defaultServiceOperationFurniture"
+			expression="execution(* com.focustech.furniture..service.impl.*ServiceImpl.*(..))" />
+		
 		<aop:advisor pointcut-ref="defaultServiceOperation"
 			advice-ref="defaultTxAdvice" order="10" />
+		
 		<aop:advisor pointcut-ref="defaultServiceOperationVe"
+			advice-ref="defaultTxAdvice" order="10" />
+		
+		<aop:advisor pointcut-ref="defaultServiceOperationFurniture"
 			advice-ref="defaultTxAdvice" order="10" />
 	</aop:config>
 	<tx:advice id="defaultTxAdvice"

@@ -239,7 +239,7 @@ public class UitoolController extends AbstractController {
 				ResultSet rs = metaData.getTables(null, null, null, new String[] { "TABLE" });
 				while (rs.next()) {
 					String tName = rs.getString(3);
-			     	if(tName.startsWith("biz")){
+			     	if(tName.startsWith("biz") || tName.startsWith("fnt")){
 			     		tableNameList.add(tName);
 			     	}
 				}
