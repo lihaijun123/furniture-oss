@@ -8,4 +8,4 @@
 <script type="text/javascript" src="/js/uploadFile/uploadify.v2.1.4.min.js"></script>
 <script type="text/javascript" src="/js/uploadFile/fileUploadInit.js"></script>
 <script type="text/javascript" src="/js/uploadFile/uploadify_zh_CN.js"></script>
-<%@include file="./alertdialog.jsp" %>
+

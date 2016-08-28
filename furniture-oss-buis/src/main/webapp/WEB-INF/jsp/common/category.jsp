@@ -1,9 +1,9 @@
 <%@page language="java" contentType="text/html; charset=utf-8"%>
 <link rel="stylesheet" type="text/css" href="/js/areaGear/areaGear.css" />
 <link rel="stylesheet" type="text/css" href="/css/product/product.css" />
-<script src="js/category/jquery.category.js" type="text/javascript" charset="utf-8"></script>
-<script src="js/category/jquery.linkage.js" type="text/javascript" charset="utf-8"></script>
-<script src="js/category/jquery.pop.js" type="text/javascript" charset="utf-8"></script>
+<script src="/js/category/jquery.category.js" type="text/javascript" charset="utf-8"></script>
+<script src="/js/category/jquery.linkage.js" type="text/javascript" charset="utf-8"></script>
+<script src="/js/category/jquery.pop.js" type="text/javascript" charset="utf-8"></script>
 <div class="outLayer" id="cateLayer" style="width:530px;display:none;">
   <h3>请选择产品目录</h3>
   <div class="outCon">

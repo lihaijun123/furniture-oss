@@ -8,14 +8,14 @@
 <title>Focus3D后台系统</title>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <link rel="stylesheet" type="text/css" href="/resources/css/ext-all-main.css" />
-<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="/js/jquery.js"></script>
 <script type="text/javascript" src="/extjs/ext-base-main.js"></script>
 <script type="text/javascript" src="/extjs/ext-all-main.js"></script>
 <script type="text/javascript" src="/extjs/style-main.js"></script>
 <script type="text/javascript" src="/extjs/page_widget-main.js"></script>
 <script type="text/javascript" src="/extjs/ext-base.js"></script>
 <script type="text/javascript" src="/extjs/FocusRemoteCaller.js"></script>
-<script language="javascript" src="js/pop_window.js"></script>
+<script language="javascript" src="/js/pop_window.js"></script>
 <script language="javascript" src="/js/bulletin.js"></script>
 <script type="text/javascript" src="/js/help/iframe_menu.js" ></script>
 <style type="text/css">

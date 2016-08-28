@@ -3,7 +3,7 @@
  * @author geliang
  */
 (function($) {
-    $.fn.pop = function() {
+    $.fn.pop = function() {debugger;
         var win = $(this);
         var top = ($(window).height() - win.height()) / 2 + $(window).scrollTop();
         var left = ($(window).width() - win.width()) / 2 + $(window).scrollLeft();
@@ -12,7 +12,7 @@
             'left': left > 0 ? left : 0,
             'z-index': 101,
             'position': 'absolute'
-        }).fadeIn("fast", function() {
+        }).fadeIn("fast", function() {debugger;
             if ($("#pop_mask").size() > 0) {
                 $("#pop_mask").css({
                     'width': document.documentElement.scrollWidth + "px",
@@ -34,6 +34,7 @@
                 };
                 $('<div id="pop_mask"></div>').css(mask_css).appendTo($('body'));
                 //IE6 select box bug
+                /*
                 if ($.browser.msie && $.browser.version < 7) {
                     var mask_iframe = $('<iframe frameborder="0"  tabindex="-1" src="javascript:void(0);"></iframe>');
                     mask_iframe.css({
@@ -48,6 +49,7 @@
                     });
                     $('#pop_mask').append(mask_iframe);
                 }
+                */
             }
         });
     }

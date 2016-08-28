@@ -84,6 +84,7 @@
 		<mapping class="com.focustech.focus3d.model.agent.auth.AgentRoleResource"/>
 		<mapping class="com.focustech.focus3d.model.agent.auth.AgentUserRole"/>
 		<!-- 家具 -->
+		<mapping class="com.focustech.furniture.model.common.CoreCategory"/>
 		<mapping class="com.focustech.furniture.model.FntProduct"/>
 	</session-factory>
 </hibernate-configuration>

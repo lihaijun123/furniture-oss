@@ -54,7 +54,10 @@
 		</tr>
 		<tr>
 			<th><font color="red">*</font>类别：</th>
-			<td ><form:input path="category"/></td>
+			<td >
+				<input type="text" id="categoryName" name="categoryName"/>
+				<input type="hidden" class="text w4"  id="categoryCode" name="categoryCode"/>
+			</td>
 		</tr>
 		<tr>
 			<th>风格：</th>
@@ -129,12 +132,13 @@
 <script type="text/javascript" src="/extjs/ext-all.js"></script>
 <!-- Ext Js Lib End -->
 <!-- User Defined Js Start -->
-<script src="extjs/validate_form.js" type="text/javascript"></script>
+<script src="/extjs/validate_form.js" type="text/javascript"></script>
 <script type="text/javascript" src="/js/util.js"></script>
 <script type="text/javascript" src="/js/calendar.js"></script>
 <script type="text/javascript" src="/js/jquery-1.11.1.min.js"></script>
-<script type="text/javascript" src="/js/jquery.validate.extend.js"></script>
+
 <script type="text/javascript" src="/js/jquery.validate.min.js"></script>
 <%@include file="/WEB-INF/jsp/common/uploadfile.jsp" %>
+<%@include file="/WEB-INF/jsp/common/category.jsp" %>
 <script type="text/javascript" src="/js/fnt/product.js"></script>
 </html>

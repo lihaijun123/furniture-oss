@@ -1,10 +1,11 @@
 
 $(function(){
-
 	//video
 	var initJson2 = {};
 	initJson2.fileExt = "*.unity3d";
 	veUploadify(initJson2, "file_upload1");
+	
+	$("#categoryName").category();
 	
 	$("#fntProductForm").validate({
     	onfocusout:function(element){$(element).valid();},
@@ -42,7 +43,6 @@ $(function(){
 	    	}
     	},
     	submitHandler:function(form){
-    	    alert($("#modelFileSn").val());
     		form.submit();
     	}
     });

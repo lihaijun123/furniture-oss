@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE uitool PUBLIC "-//NewLand UITool //DTD Direct Web Remoting 1.0//EN" "../function-config.dtd">
+<!-- main config file ,this config file is required -->
+<function-config>
+    <system sysId="0000">
+        <function id="1080344" beanName="">
+            <execute-sql>
+                <sql id="fnt_product">
+                    <![CDATA[
+					select *
+					from (
+						select 
+SN,
+NAME,
+BRAND,
+PRICE,
+MATERIA,
+COLOR,
+SPEC_NAME,
+SPEC_SIZE,
+PARAMETER,
+GROSS_WEIGHT,
+CATEGORY_NAME,
+STYLE,
+MODEL_NAME,
+MODEL_FILE_SN,
+DESIGN,
+IS_WITH_CORE,
+FILLER,
+STATUS,
+SHELVES_TIME,
+ADDER_SN,
+ADDER_NAME,
+ADD_TIME,
+UPDATER_SN,
+UPDATER_NAME,
+UPDATE_TIME
+ from fnt_product
+					) a where 1=1
+					]]>
+                </sql>
+            </execute-sql>
+            <func-sql id="1" sqlId="fnt_product" loop="false" sqlType="select" argGroup="0" executer="">
+                <params id="" errMsg="查询列表信息出错">
+                </params>
+            </func-sql>
+        </function>
+    </system>
+</function-config>
