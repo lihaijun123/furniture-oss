@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE uitool PUBLIC "-//NewLand UITool //DTD Direct Web Remoting 1.0//EN" "../function-config.dtd">
+<!-- main config file ,this config file is required -->
+<function-config>
+    <system sysId="0000">
+        <function id="1080345" beanName="">
+            <execute-sql>
+                <sql id="core_category">
+                    <![CDATA[
+					select *
+					from (
+						select 
+REC_ID,
+CAT_CODE,
+PARENT_CAT_CODE,
+CAT_LEVEL,
+CAT_NAME_EN,
+CAT_NAME_CN,
+CAT_TYPE,
+LINK_CAT_CODE,
+OLD_CAT_CODE,
+LAST_UPDATE_TIME,
+LAST_UPDATER_NO,
+LAST_UPDATER_NAME,
+CAT_STATUS,
+AIM_CAT_CODE,
+CAT_PROPERTY,
+CAT_DESCRIPTION,
+REP_TIME
+ from core_category
+					) a where 1=1
+					]]>
+                </sql>
+            </execute-sql>
+            <func-sql id="1" sqlId="core_category" loop="false" sqlType="select" argGroup="0" executer="">
+                <params id="" errMsg="查询列表信息出错">
+                </params>
+            </func-sql>
+        </function>
+    </system>
+</function-config>

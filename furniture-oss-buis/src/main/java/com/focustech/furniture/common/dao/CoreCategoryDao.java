@@ -42,4 +42,32 @@ public interface CoreCategoryDao<T> extends BaseHibernateDao<T>{
 	 * @return
 	 */
 	public CoreCategory selectCategoryByCatCode(String catCode);
+	/**
+	 * *
+	 * @param level
+	 * @return
+	 */
+	public List<CoreCategory> getListByLevel(int level);
+	/**
+	 * 
+	 * *
+	 * @param level
+	 * @param parentCode
+	 * @return
+	 */
+	public int getCateCodeIndex(Long parentCode);
+	/**
+	 * 
+	 * *
+	 * @param parentCode
+	 * @return
+	 */
+	public List<CoreCategory> getListByParentCode(Long parentCode);
+	/**
+	 * 
+	 * *
+	 * @param code
+	 * @return
+	 */
+	public CoreCategory getByCateCode(Long code);
 }

@@ -35,6 +35,13 @@
 			<td ><form:input path="price"/></td>
 		</tr>
 		<tr>
+			<th><font color="red">*</font>图片：</th>
+			<td >
+				<f:img id="picFileSn_img" hid="picFileSn" hname="picFileSn" width="120" height="120" src="${fntProduct.picFileSn }"/><br>
+				<input id="file_upload2" name="file_upload2" type="file" /><br>
+			</td>
+		</tr>
+		<tr>
 			<th>材质：</th>
 			<td ><form:input path="materia"/></td>
 		</tr>

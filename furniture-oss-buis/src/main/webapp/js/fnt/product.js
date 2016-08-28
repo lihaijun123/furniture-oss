@@ -1,9 +1,13 @@
 
 $(function(){
-	//video
+	var initJson1 = {};
+	initJson1.fileExt = "*.unity3d";
+	veUploadify(initJson1, "file_upload1");
+	
 	var initJson2 = {};
-	initJson2.fileExt = "*.unity3d";
-	veUploadify(initJson2, "file_upload1");
+	initJson2.fileExt = "*.jpg;*.jpeg";
+	initJson2.fileDesc = "*.jpg;*.jpeg";
+	veUploadify(initJson2, "file_upload2");
 	
 	$("#categoryName").category();
 	
@@ -54,4 +58,8 @@ $(function(){
 //需提供文件html元素id
 function getfile_upload1Id(){
 	return "modelFileSn";
+}
+
+function getfile_upload2Id(){
+	return "picFileSn";
 }

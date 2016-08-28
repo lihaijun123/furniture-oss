@@ -8,6 +8,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.persistence.Transient;
 /**
  * 产品目录
  * *
@@ -60,6 +61,9 @@ public class CoreCategory implements Serializable{
 	private String catDescription;
 
 	private Date repTime;
+	
+	@Transient
+	private CoreCategory parent;
 
 	public Integer getRecId() {
 		return recId;
@@ -162,5 +166,11 @@ public class CoreCategory implements Serializable{
 	}
 	public void setRepTime(Date repTime) {
 		this.repTime = repTime;
+	}
+	public CoreCategory getParent() {
+		return parent;
+	}
+	public void setParent(CoreCategory parent) {
+		this.parent = parent;
 	}
 }

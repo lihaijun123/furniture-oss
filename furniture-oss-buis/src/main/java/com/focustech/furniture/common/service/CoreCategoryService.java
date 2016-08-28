@@ -3,6 +3,7 @@ package com.focustech.furniture.common.service;
 import java.util.List;
 
 import com.focustech.furniture.model.common.Param;
+import com.focustech.oss2008.service.BaseEntityService;
 
 /**
  * 产品目录
@@ -10,7 +11,7 @@ import com.focustech.furniture.model.common.Param;
  * @author lihaijun
  *
  */
-public interface CoreCategoryService {
+public interface CoreCategoryService<T> extends BaseEntityService<T>{
 	/** 页面展示总级数 */
     public static final int TOTAL_LEVEL = 3;
 
@@ -50,5 +51,29 @@ public interface CoreCategoryService {
      * @return
      */
 	public String getFirstCatLevelByCode(String code);
+	/**
+	 * *
+	 * @param level
+	 * @return
+	 */
+	public List<T> getListByLevel(int level);
+	/***
+	 * 
+	 * @param parentCode
+	 * @return
+	 */
+	public List<T> getListByParentCode(Long parentCode);
+	/**
+	 * *
+	 * @return
+	 */
+	public T getByCateCode(Long code);
+	/**
+	 * *
+	 * @param level
+	 * @param parentCode
+	 * @return
+	 */
+	public int getCateCodeIndex(Long parentCode);
 
 }

@@ -48,6 +48,7 @@ public class FntProduct extends BaseEntity {
 	private Integer status;
 	private Date shelvesTime;
 	private String remark;
+	private Long picFileSn;
 	public Long getSn() {
 		return sn;
 	}
@@ -174,5 +175,10 @@ public class FntProduct extends BaseEntity {
 	public void setRemark(String remark) {
 		this.remark = remark;
 	}
-	
+	public Long getPicFileSn() {
+		return picFileSn;
+	}
+	public void setPicFileSn(Long picFileSn) {
+		this.picFileSn = picFileSn;
+	}
 }

@@ -12,6 +12,8 @@ import com.focustech.furniture.common.dao.CoreCategoryDao;
 import com.focustech.furniture.common.service.CoreCategoryService;
 import com.focustech.furniture.model.common.CoreCategory;
 import com.focustech.furniture.model.common.Param;
+import com.focustech.oss2008.dao.BaseHibernateDao;
+import com.focustech.oss2008.service.impl.BaseEntityServiceImpl;
 /**
  * 产品目录
  * *
@@ -19,11 +21,17 @@ import com.focustech.furniture.model.common.Param;
  *
  */
 @Service("ciefCoreCategoryServiceImpl")
-public class CoreCategoryServiceImpl implements CoreCategoryService {
+public class CoreCategoryServiceImpl extends BaseEntityServiceImpl<CoreCategory> implements CoreCategoryService<CoreCategory> {
+	
 	@Autowired
 	@Qualifier("ciefCoreCategoryDaoImpl")
 	private CoreCategoryDao<CoreCategory> coreCategoryDao;
 
+	@Override
+	public BaseHibernateDao<CoreCategory> getEntityDao() {
+		return coreCategoryDao;
+	}
+	
 	@Override
 	public List<List<Param>> getFirstLevelCn(String curLevel) {
 		List<List<Param>> result = new ArrayList<List<Param>>();
@@ -118,4 +126,23 @@ public class CoreCategoryServiceImpl implements CoreCategoryService {
     	}
 	}
 
+	@Override
+	public List<CoreCategory> getListByLevel(int level) {
+		return coreCategoryDao.getListByLevel(level);
+	}
+
+	@Override
+	public List<CoreCategory> getListByParentCode(Long parentCode) {
+		return coreCategoryDao.getListByParentCode(parentCode);
+	}
+
+	@Override
+	public CoreCategory getByCateCode(Long code) {
+		return coreCategoryDao.getByCateCode(code);
+	}
+
+	@Override
+	public int getCateCodeIndex(Long parentCode) {
+		return coreCategoryDao.getCateCodeIndex(parentCode);
+	}
 }
