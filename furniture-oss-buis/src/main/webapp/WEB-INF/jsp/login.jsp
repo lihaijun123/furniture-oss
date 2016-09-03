@@ -151,8 +151,8 @@ function showHide(obj,msg) {
 		<input type="text" size="8" id="dynNum" name="dynPassword" />
 	</div>
 	</div>
-	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	<button onclick="doSubmit(true)"><img src="images/loginbutton.gif" alt="登录" /></button>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<button onclick="doSubmit(true)"><img src="/images/loginbutton.gif" alt="登录" /></button>
 	<strong id="echo" class="hid"></strong>
 </form>
 <div id="c">Copyright &copy; 2008 焦点科技. 版权所有</div>

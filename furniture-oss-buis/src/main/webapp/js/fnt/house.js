@@ -1,5 +1,9 @@
 
 $(function(){
+	var province = $("#province").attr("value1")=="" ? "请选择" : $("#province").attr("value1");
+	var city = $("#city").attr("value1")=="" ? "请选择" : $("#city").attr("value1");
+   	setup(province, city);
+   	
 	var initJson1 = {};
 	initJson1.fileExt = "*.unity3d";
 	initJson1.fileDesc = "*.unity3d";
@@ -10,9 +14,7 @@ $(function(){
 	initJson2.fileDesc = "*.jpg;*.jpeg";
 	veUploadify(initJson2, "file_upload2");
 	
-	$("#categoryName").category();
-	
-	$("#fntProductForm").validate({
+	$("#fntHouseForm").validate({
     	onfocusout:function(element){$(element).valid();},
     	errorPlacement: function(error, element){
     		error.appendTo(element.parent());
@@ -22,30 +24,22 @@ $(function(){
     			required: true,
     			maxlength: 30
     		},
-    		price:{
+    		area:{
     			required: true,
     			maxlength: 30,
     		 	number:true
-    		},
-    		category:{
-    			required: true,
-    			maxlength: 30
     		}
     	},
     	messages: {
     		name:{
-	    		required: "请输入产品名称",
+	    		required: "请输入户型名称",
 	    		maxlength: "请输入{0}个字以内"
 	    	},
-	    	price:{
-				required: "请输入价格",
+	    	area:{
+				required: "请输入面积",
 				maxlength: "请输入{0}个字以内",
-				number: "请输入正确的价格"
-			},
-			category:{
-	    		required: "请输入类别",
-	    		maxlength: "请输入{0}个字以内"
-	    	}
+				number: "请输入正确的面积"
+			}
     	},
     	submitHandler:function(form){
     		form.submit();
@@ -54,8 +48,6 @@ $(function(){
 
 	
 });
-
-
 //需提供文件html元素id
 function getfile_upload1Id(){
 	return "modelFileSn";

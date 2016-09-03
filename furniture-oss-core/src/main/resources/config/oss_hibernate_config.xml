@@ -86,5 +86,6 @@
 		<!-- 家具 -->
 		<mapping class="com.focustech.furniture.model.common.CoreCategory"/>
 		<mapping class="com.focustech.furniture.model.FntProduct"/>
+		<mapping class="com.focustech.furniture.model.FntHouse"/>
 	</session-factory>
 </hibernate-configuration>
