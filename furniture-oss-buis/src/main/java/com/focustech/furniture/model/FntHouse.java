@@ -29,7 +29,7 @@ public class FntHouse extends BaseEntity {
 	private String street;
 	private String buildingNo;
 	private Integer type;
-	private String area;
+	private Double area;
 	private Long picFileSn;
 	private String modelName;
 	private Long modelFileSn;
@@ -85,10 +85,11 @@ public class FntHouse extends BaseEntity {
 	public void setType(Integer type) {
 		this.type = type;
 	}
-	public String getArea() {
+	
+	public Double getArea() {
 		return area;
 	}
-	public void setArea(String area) {
+	public void setArea(Double area) {
 		this.area = area;
 	}
 	public Long getPicFileSn() {

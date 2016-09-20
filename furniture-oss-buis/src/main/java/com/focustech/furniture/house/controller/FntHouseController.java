@@ -75,4 +75,17 @@ public class FntHouseController extends AbstractController{
         modelMap.addAttribute("message", "修改成功");
         return "/fnt/house/edit";
 	}
+	/**
+	 * 
+	 * *
+	 * @param sn
+	 * @param modelMap
+	 * @return
+	 */
+	@RequestMapping(params = "method=delete", method = RequestMethod.GET)
+	public String delete(Long sn, ModelMap modelMap){
+		FntHouse fntHouse = fntHouseService.select(sn);
+		fntHouseService.delete(fntHouse);
+		return redirectTo("/uitoolList.ui?funcID=1080346");
+	}
 }

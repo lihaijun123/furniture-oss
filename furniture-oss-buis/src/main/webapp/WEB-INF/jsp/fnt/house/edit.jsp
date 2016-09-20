@@ -18,6 +18,7 @@
 <body>
 <form:form id="fntHouseForm" modelAttribute="fntHouse" action="/fnt/house.do" method="post">
 	<input type="hidden" name="method" value="edit" />
+	<form:hidden path="sn"/>
 	<font color="red">${message }</font>
 	<table width="100%">
 		<caption class="x-panel-header">添加户型</caption>
