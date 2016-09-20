@@ -33,6 +33,7 @@ public class FntHouse extends BaseEntity {
 	private Long picFileSn;
 	private String modelName;
 	private Long modelFileSn;
+	private Integer modelFileVersion;
 	private Integer roomNum;
 	private Integer livingRoomNum;
 	private Integer status;
@@ -133,6 +134,12 @@ public class FntHouse extends BaseEntity {
 	}
 	public void setModelFileSn(Long modelFileSn) {
 		this.modelFileSn = modelFileSn;
+	}
+	public Integer getModelFileVersion() {
+		return modelFileVersion;
+	}
+	public void setModelFileVersion(Integer modelFileVersion) {
+		this.modelFileVersion = modelFileVersion;
 	}
 	
 }

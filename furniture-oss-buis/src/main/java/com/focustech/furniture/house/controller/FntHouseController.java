@@ -6,6 +6,7 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import com.focustech.common.utils.TCUtil;
 import com.focustech.extend.spring.argresolver.RedirectAttributes;
 import com.focustech.furniture.house.service.FntHouseService;
 import com.focustech.furniture.model.FntHouse;
@@ -42,6 +43,7 @@ public class FntHouseController extends AbstractController{
 	@RequestMapping(params = "method=create", method = RequestMethod.POST)
 	public String create(FntHouse fntHouse, ModelMap modelMap, RedirectAttributes redirectAttributes){
 		fntHouse.setStatus(1);
+		fntHouse.setModelFileVersion(1);
 		fntHouseService.insertOrUpdate(fntHouse);
         modelMap.addAttribute("fntHouse", fntHouse);
         redirectAttributes.addFlashAttribute("创建成功");
@@ -70,7 +72,13 @@ public class FntHouseController extends AbstractController{
 	 */
 	@RequestMapping(params = "method=edit", method = RequestMethod.POST)
 	public String edit(FntHouse fntHouse, ModelMap modelMap){
-		fntHouseService.insertOrUpdate(fntHouse);
+		FntHouse dbObj = fntHouseService.select(fntHouse.getSn());
+		fntHouse.setModelFileVersion(dbObj.getModelFileVersion());
+		if(dbObj.getModelFileSn() != null && !dbObj.getModelFileSn().equals(fntHouse.getModelFileSn())){
+			Integer version = TCUtil.iv(fntHouse.getModelFileVersion());
+			fntHouse.setModelFileVersion(++ version);
+		}
+		fntHouseService.update(fntHouse);
         modelMap.addAttribute("fntHouse", fntHouse);
         modelMap.addAttribute("message", "修改成功");
         return "/fnt/house/edit";
