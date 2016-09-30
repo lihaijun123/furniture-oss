@@ -15,7 +15,6 @@ import com.focustech.oss2008.model.Category;
 import com.focustech.uitool.framework.utils.DBTools;
 
 /**
- * Copyright (c) 2006, focustech All rights reserved 本類用來處理ＭＩＣ系統中目錄相關的信息． 對目錄信息的初始化和緩存
  *
  * @author tc-hexuey
  * @version 1.0 2008-6-20 下午03:55:13

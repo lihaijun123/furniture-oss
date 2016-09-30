@@ -7,6 +7,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.persistence.Transient;
 
 import com.focustech.model.common.BaseEntity;
 /**
@@ -42,6 +43,7 @@ public class FntProduct extends BaseEntity {
 	private String style;
 	private String modelName;
 	private Long modelFileSn;
+	private Integer modelFileVersion;
 	private String design;
 	private Integer isWithCore;
 	private String filler;
@@ -49,6 +51,8 @@ public class FntProduct extends BaseEntity {
 	private Date shelvesTime;
 	private String remark;
 	private Long picFileSn;
+	@Transient
+	private String modelFileUrl;
 	public Long getSn() {
 		return sn;
 	}
@@ -181,4 +185,17 @@ public class FntProduct extends BaseEntity {
 	public void setPicFileSn(Long picFileSn) {
 		this.picFileSn = picFileSn;
 	}
+	public String getModelFileUrl() {
+		return modelFileUrl;
+	}
+	public void setModelFileUrl(String modelFileUrl) {
+		this.modelFileUrl = modelFileUrl;
+	}
+	public Integer getModelFileVersion() {
+		return modelFileVersion;
+	}
+	public void setModelFileVersion(Integer modelFileVersion) {
+		this.modelFileVersion = modelFileVersion;
+	}
+	
 }
