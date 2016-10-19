@@ -20,6 +20,7 @@
 	<input type="hidden" name="method" value=edit />
 	<font color="red">${message }</font>
 	<form:hidden path="sn"/>
+	<form:hidden path="modelFileUrl"/>
 	<table width="100%">
 		<caption class="x-panel-header">添加产品</caption>
 		<tr>

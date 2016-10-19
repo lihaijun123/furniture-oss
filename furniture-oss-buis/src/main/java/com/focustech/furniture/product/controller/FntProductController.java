@@ -6,7 +6,11 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+
 import com.focustech.cief.filemanage.common.utils.FileManageUtil;
+
+import com.focustech.common.utils.TCUtil;
+
 import com.focustech.extend.spring.argresolver.RedirectAttributes;
 import com.focustech.furniture.model.FntProduct;
 import com.focustech.furniture.product.service.FntProductService;
@@ -44,6 +48,8 @@ public class FntProductController extends AbstractController {
 	 */
 	@RequestMapping(params = "method=create", method = RequestMethod.POST)
 	public String create(FntProduct fntProduct, ModelMap modelMap, RedirectAttributes redirectAttributes){
+		fntProduct.setStatus(1);
+		fntProduct.setModelFileVersion(1);
 		fntProductService.insertOrUpdate(fntProduct);
         modelMap.addAttribute("fntProduct", fntProduct);
         redirectAttributes.addFlashAttribute("创建成功");
@@ -74,7 +80,13 @@ public class FntProductController extends AbstractController {
 	 */
 	@RequestMapping(params = "method=edit", method = RequestMethod.POST)
 	public String edit(FntProduct fntProduct, ModelMap modelMap){
-		fntProductService.insertOrUpdate(fntProduct);
+		FntProduct dbObj = fntProductService.select(fntProduct.getSn());
+		fntProduct.setModelFileVersion(dbObj.getModelFileVersion());
+		if(dbObj.getModelFileSn() != null && !dbObj.getModelFileSn().equals(fntProduct.getModelFileSn())){
+			Integer version = TCUtil.iv(fntProduct.getModelFileVersion());
+			fntProduct.setModelFileVersion(++ version);
+		}
+		fntProductService.update(fntProduct);
         modelMap.addAttribute("fntProduct", fntProduct);
         modelMap.addAttribute("message", "修改成功");
         return redirectTo("/fnt/product.do?method=edit&sn=" + fntProduct.getSn());
