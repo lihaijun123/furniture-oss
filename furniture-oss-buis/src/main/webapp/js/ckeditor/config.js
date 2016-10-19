@@ -125,7 +125,7 @@ function toDBC(contentId){
 	var txtstring = CKEDITOR.instances[contentId].getData();
 	alert('暂时不实现' + txtstring);
 	var ui = CKEDITOR.instances[contentId].getData();
-	var notValid_1 = /<[^>]*>/;debugger;
+	var notValid_1 = /<[^>]*>/;
 	while(!notValid_1.test(ui)){
 		ui = ui.replace(notValid_1, "");
 	}

@@ -3,7 +3,7 @@
  * @author geliang
  */
 (function($) {
-    $.fn.pop = function() {debugger;
+    $.fn.pop = function() {
         var win = $(this);
         var top = ($(window).height() - win.height()) / 2 + $(window).scrollTop();
         var left = ($(window).width() - win.width()) / 2 + $(window).scrollLeft();
@@ -12,7 +12,7 @@
             'left': left > 0 ? left : 0,
             'z-index': 101,
             'position': 'absolute'
-        }).fadeIn("fast", function() {debugger;
+        }).fadeIn("fast", function() {
             if ($("#pop_mask").size() > 0) {
                 $("#pop_mask").css({
                     'width': document.documentElement.scrollWidth + "px",
