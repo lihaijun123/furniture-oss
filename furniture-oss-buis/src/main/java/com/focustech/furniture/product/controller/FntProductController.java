@@ -6,7 +6,11 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+
+import com.focustech.cief.filemanage.common.utils.FileManageUtil;
+
 import com.focustech.common.utils.TCUtil;
+
 import com.focustech.extend.spring.argresolver.RedirectAttributes;
 import com.focustech.furniture.model.FntProduct;
 import com.focustech.furniture.product.service.FntProductService;
@@ -62,6 +66,8 @@ public class FntProductController extends AbstractController {
 	@RequestMapping(params = "method=edit", method = RequestMethod.GET)
 	public String edit(Long sn, ModelMap modelMap){
 		FntProduct fntProduct = fntProductService.select(sn);
+		Long modelFileSn = fntProduct.getModelFileSn();
+		FileManageUtil.getFileURL(modelFileSn);
 		modelMap.addAttribute("fntProduct", fntProduct);
 		return "/fnt/product/edit";
 	}
@@ -83,7 +89,7 @@ public class FntProductController extends AbstractController {
 		fntProductService.update(fntProduct);
         modelMap.addAttribute("fntProduct", fntProduct);
         modelMap.addAttribute("message", "修改成功");
-        return "/fnt/product/edit";
+        return redirectTo("/fnt/product.do?method=edit&sn=" + fntProduct.getSn());
 	}
 
 

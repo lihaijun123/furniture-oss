@@ -51,6 +51,7 @@ public class FntProduct extends BaseEntity {
 	private Date shelvesTime;
 	private String remark;
 	private Long picFileSn;
+	private Integer type;
 	@Transient
 	private String modelFileUrl;
 	public Long getSn() {
@@ -197,5 +198,10 @@ public class FntProduct extends BaseEntity {
 	public void setModelFileVersion(Integer modelFileVersion) {
 		this.modelFileVersion = modelFileVersion;
 	}
-	
+	public Integer getType() {
+		return type;
+	}
+	public void setType(Integer type) {
+		this.type = type;
+	}
 }
