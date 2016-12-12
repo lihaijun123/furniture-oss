@@ -21,6 +21,15 @@
 	<table width="100%">
 		<caption class="x-panel-header">添加产品</caption>
 		<tr>
+			<th><font color="red">*</font>类型：</th>
+			<td>
+				<f:complex name="type" paramType="FNT_PRODUCT_TYPE"
+							siteType="1" type="radio" itemLabel="parameterValue"
+							itemValue="parameterKey"
+							defaultValue="1" />
+			</td>
+		</tr>
+		<tr>
 			<th><font color="red">*</font>名称：</th>
 			<td ><form:input path="name"/></td>
 		</tr>
