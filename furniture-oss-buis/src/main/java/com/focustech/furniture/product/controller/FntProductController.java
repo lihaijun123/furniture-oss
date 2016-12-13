@@ -6,13 +6,9 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-
 import com.focustech.cief.filemanage.common.utils.FileManageUtil;
-
 import com.focustech.common.utils.TCUtil;
-
 import com.focustech.extend.spring.argresolver.RedirectAttributes;
-import com.focustech.furniture.model.FntHouse;
 import com.focustech.furniture.model.FntProduct;
 import com.focustech.furniture.product.service.FntProductService;
 import com.focustech.oss2008.web.AbstractController;
