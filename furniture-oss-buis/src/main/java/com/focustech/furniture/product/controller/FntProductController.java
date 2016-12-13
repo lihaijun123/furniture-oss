@@ -12,6 +12,7 @@ import com.focustech.cief.filemanage.common.utils.FileManageUtil;
 import com.focustech.common.utils.TCUtil;
 
 import com.focustech.extend.spring.argresolver.RedirectAttributes;
+import com.focustech.furniture.model.FntHouse;
 import com.focustech.furniture.model.FntProduct;
 import com.focustech.furniture.product.service.FntProductService;
 import com.focustech.oss2008.web.AbstractController;
@@ -90,6 +91,13 @@ public class FntProductController extends AbstractController {
         modelMap.addAttribute("fntProduct", fntProduct);
         modelMap.addAttribute("message", "修改成功");
         return redirectTo("/fnt/product.do?method=edit&sn=" + fntProduct.getSn());
+	}
+	
+	@RequestMapping(params = "method=delete", method = RequestMethod.GET)
+	public String delete(Long sn, ModelMap modelMap){
+		FntProduct obj = fntProductService.select(sn);
+		fntProductService.delete(obj);
+		return redirectTo("/uitoolList.ui?funcID=1080344");
 	}
 
 
