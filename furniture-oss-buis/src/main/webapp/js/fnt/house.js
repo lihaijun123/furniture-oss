@@ -10,8 +10,8 @@ $(function(){
 	veUploadify(initJson1, "file_upload1");
 	
 	var initJson2 = {};
-	initJson2.fileExt = "*.jpg;*.jpeg";
-	initJson2.fileDesc = "*.jpg;*.jpeg";
+	initJson2.fileExt = "*.jpg;*.jpeg;*.png";
+	initJson2.fileDesc = "*.jpg;*.jpeg;*.png";
 	veUploadify(initJson2, "file_upload2");
 	
 	$("#fntHouseForm").validate({

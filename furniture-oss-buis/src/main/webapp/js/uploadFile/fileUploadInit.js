@@ -140,8 +140,8 @@ function veUploadify(initJsonValue, uploadFileId){
 		jsonObj["fileDesc"] = initJsonValue.fileDesc;
 	}
 	else {
-		jsonObj["fileExt"] = "*.jpg;*.album;*.wmv;*.flv;*.mp3;*.wma;*.rar;*.3ds;*.ma;*.mb;*.swf;*.zip;*.unity3d;";
-		jsonObj["fileDesc"] = "*.jpg;*.album;*.wmv;*.flv;*.mp3;*.wma;*.rar;*.3ds;*.ma;*.mb;*.swf;*.zip;*.unity3d;";
+		jsonObj["fileExt"] = "*.jpg;*.album;*.wmv;*.flv;*.mp3;*.wma;*.rar;*.3ds;*.ma;*.mb;*.swf;*.zip;*.unity3d;*.png;";
+		jsonObj["fileDesc"] = "*.jpg;*.album;*.wmv;*.flv;*.mp3;*.wma;*.rar;*.3ds;*.ma;*.mb;*.swf;*.zip;*.unity3d;*.png;";
 	}
 	if(!isEmpty(initJsonValue, "sizeLimit")){
 		jsonObj["sizeLimit"] = initJsonValue.sizeLimit;
