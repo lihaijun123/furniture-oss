@@ -260,7 +260,7 @@ input:focus {outline:none}
 #choosePhoto .reconstru {margin-bottom:40px;height:395px}
 .filterSub {padding:5px 0 7px}
 
-.success, .warn, .popTip, .wrong,.ok2,.error2{ background-image:url(../images/tip_icon.png); background-repeat:no-repeat }
+.success, .warn, .popTip, .wrong,.ok2,.error2{ background-image:url(/images/tip_icon.png); background-repeat:no-repeat }
 .wrong{color:#8e2c11;background-position:-119px 4px;background-position:-119px 2px\9;padding-left:14px;display:block;margin-top:2px}
 
 .popBox .contact-fm {height:240px}
