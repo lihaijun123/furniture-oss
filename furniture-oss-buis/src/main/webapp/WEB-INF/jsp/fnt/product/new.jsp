@@ -18,8 +18,32 @@
 <body>
 <form:form id="fntProductForm" modelAttribute="fntProduct" action="/fnt/product.do" method="post">
 	<input type="hidden" name="method" value="create" />
+	<input type="hidden" name="name" value="" />
+	<input type="hidden" name="categoryName" value="" />
+	<input type="hidden" name="categoryCode" value="" />
+	<input type="hidden" name="type" value="1" />
+	<input type="hidden" name="status" value="2" />
 	<table width="100%">
 		<caption class="x-panel-header">添加产品</caption>
+		<tr>
+			<th><font color="red">*</font>产品ID：</th>
+			<td>
+				<form:input path="productId"/>
+			</td>
+		</tr>
+		<tr>
+			<th>模型名称：</th>
+			<td ><form:input path="modelName"/></td>
+		</tr>
+		<tr>
+			<th>模型文件：</th>
+			<td>
+				<input id="file_upload1" name="file_upload1" type="file" /><br>
+				<input type="hidden" id="modelFileSn" name="modelFileSn"/><br>
+				<span id="modelFileSn_namedisplay"></span><br>
+			</td>
+		</tr>
+		<!-- 
 		<tr>
 			<th><font color="red">*</font>类型：</th>
 			<td>
@@ -84,20 +108,8 @@
 			<td ><form:input path="parameter"/></td>
 		</tr>
 		<tr>
-			<th>模型名称：</th>
-			<td ><form:input path="modelName"/></td>
-		</tr>
-		<tr>
 			<th>图案：</th>
 			<td ><form:input path="design"/></td>
-		</tr>
-		<tr>
-			<th>模型文件：</th>
-			<td>
-				<input id="file_upload1" name="file_upload1" type="file" /><br>
-				<input type="hidden" id="modelFileSn" name="modelFileSn"/><br>
-				<span id="modelFileSn_namedisplay" /><br>
-			</td>
 		</tr>
 		<tr>
 			<th>是否上架：</th>
@@ -119,6 +131,7 @@
 				<form:textarea path="remark" rows="10" cols="80" /><br></br>
 			</td>
 		</tr>
+		-->
 	</table>
 	<div style="display: none;">
 		<table>

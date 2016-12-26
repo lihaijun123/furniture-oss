@@ -35,7 +35,8 @@ ADD_TIME,
 UPDATER_SN,
 UPDATER_NAME,
 UPDATE_TIME,
-TYPE
+TYPE,
+PRODUCT_ID
  from fnt_product
 					) a where 1=1
 					]]>

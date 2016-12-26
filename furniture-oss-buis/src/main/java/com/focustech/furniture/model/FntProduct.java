@@ -28,7 +28,7 @@ public class FntProduct extends BaseEntity {
 	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long sn;
-	
+	private String productId;
 	private String name;
 	private String brand;
 	private double price;
@@ -204,4 +204,11 @@ public class FntProduct extends BaseEntity {
 	public void setType(Integer type) {
 		this.type = type;
 	}
+	public String getProductId() {
+		return productId;
+	}
+	public void setProductId(String productId) {
+		this.productId = productId;
+	}
+	
 }

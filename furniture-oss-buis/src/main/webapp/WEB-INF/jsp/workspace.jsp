@@ -180,7 +180,7 @@ function changeListModel() {
 	<table width="100%" style="background: none; border: none">
 		<tr>
 			<td id="toolbar" width="350px" style="padding-left: 10px;font-size: 13px;font-weight: bold ;color:#15428B; vertical-align: middle; background: none; border: none;font-family︰tahoma,arial,verdana,sans-serif">
-				<img src="/images/logo2.gif"/>
+				<img src="/images/logo.gif"/>
 			</td>
 			<td
 				style="margin-right: 10px; font-size: 12px; font-color: red; background: none; border: none; vertical-align: bottom; "
