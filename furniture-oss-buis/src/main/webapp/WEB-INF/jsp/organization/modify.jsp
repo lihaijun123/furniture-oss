@@ -44,7 +44,7 @@
 						<input type="hidden" name="departmentParentId" value="0"/>
 						<c:choose>
 							<c:when test="${empty parentDepartment}">
-								南京焦点总部
+								信利集团
 							</c:when>
 							<c:otherwise>
 								${parentDepartment.departmentName}

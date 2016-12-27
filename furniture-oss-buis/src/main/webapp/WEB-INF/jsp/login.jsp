@@ -151,7 +151,7 @@ function showHide(obj,msg) {
 		<input type="text" size="8" id="dynNum" name="dynPassword" />
 	</div>
 	</div>
-	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<span style="margin-right: 80px;"></span>
 	<button onclick="doSubmit(true)"><img src="/images/loginbutton.gif" alt="登录" /></button>
 	<strong id="echo" class="hid"></strong>
 </form>
