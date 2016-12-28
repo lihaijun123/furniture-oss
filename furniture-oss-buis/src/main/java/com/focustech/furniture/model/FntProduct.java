@@ -210,5 +210,4 @@ public class FntProduct extends BaseEntity {
 	public void setProductId(String productId) {
 		this.productId = productId;
 	}
-	
 }

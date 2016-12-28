@@ -38,6 +38,7 @@ public class FntHouse extends BaseEntity {
 	private Integer livingRoomNum;
 	private Integer status;
 	private String remark;
+	private Integer isRecommend;
 	public Long getSn() {
 		return sn;
 	}
@@ -141,5 +142,10 @@ public class FntHouse extends BaseEntity {
 	public void setModelFileVersion(Integer modelFileVersion) {
 		this.modelFileVersion = modelFileVersion;
 	}
-	
+	public Integer getIsRecommend() {
+		return isRecommend;
+	}
+	public void setIsRecommend(Integer isRecommend) {
+		this.isRecommend = isRecommend;
+	}
 }

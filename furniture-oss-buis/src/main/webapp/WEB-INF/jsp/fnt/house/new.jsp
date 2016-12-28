@@ -99,6 +99,20 @@
 			<td ><form:input path="buildingNo"/></td>
 		</tr>
 		<tr>
+			<th>是否推荐：</th>
+			<td >
+				<f:complex id="isRecommend"
+							name="isRecommend"
+							type="radio"
+							itemLabel="parameterValue"
+							itemValue="parameterKey"
+							paramType="IS_RECOMMEND"
+							siteType="1"
+							defaultValue="0"
+							/>
+			</td>
+		</tr>
+		<tr>
 			<th>状态：</th>
 			<td >
 				<f:complex id="status"
