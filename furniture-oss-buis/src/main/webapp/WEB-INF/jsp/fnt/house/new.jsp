@@ -120,9 +120,10 @@
 							type="radio"
 							itemLabel="parameterValue"
 							itemValue="parameterKey"
-							paramType="VALID_FLAG_TWO"
+							paramType="AUDIT_STATUS"
 							siteType="1"
-							defaultValue="1"
+							defaultValue="3"
+							exceptItems="1,2,5,6,7,8,9"
 							/>
 			</td>
 		</tr>
